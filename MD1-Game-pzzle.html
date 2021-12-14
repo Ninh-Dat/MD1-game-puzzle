@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="anh1" src="jmg/gau1.jpg"height="100px" width="600px" onclick="changeImage1()"/></br>
+<img id="anh2" src="jmg/meo2.jpg" height="100px" width="600px" onclick="changeImage2()"/></br>
+<img id="anh3" src="jmg/khi3.jpg" height="100px" width="600px" onclick="changeImage3()"/></br>
+<img id="anh4" src="jmg/gau4.jpg" height="100px" width="600px" onclick="changeImage4()"/></br>
+<img id="anh5" src="jmg/gau5.jpg" height="100px" width="600px" onclick="changeImage5()"/></br>
+<script>
+    let count1=0;
+    let count2=1;
+    let count3=2;
+    let count4=3;
+    let count5=4
+    let img1=document.getElementById('anh1');
+    let img2=document.getElementById('anh2');
+    let img3=document.getElementById('anh3');
+    let img4=document.getElementById('anh4');
+    let img5=document.getElementById('anh5');
+
+
+    function changeImage1()
+    {
+        count1++;
+        if (count1 == 1) {
+            img1.src = 'jmg/gau1.jpg';
+        } else if (count1 == 2) {
+            img1.src = 'jmg/khi1.jpg';
+        } else {
+            count1 = 0;
+            img1.src = 'jmg/meo1.jpg'
+        }
+        checkShadow();
+    }
+
+    function changeImage2()
+    {
+        count2++;
+        if (count2 == 1) {
+            img2.src = 'jmg/gau2.jpg';
+        }
+            else if (count2 == 2)
+            {
+                img2.src='jmg/khi2.jpg';
+            }
+            else {
+            count2 = 0;
+            img2.src = 'jmg/meo2.jpg';
+        }
+            checkShadow()
+        }
+        function changeImage3() {
+            count3++;
+            if (count3 == 1) {
+                img3.src = 'jmg/gau3.jpg';
+            } else if (count3 == 2) {
+                img3.src = 'jmg/khi3.jpg';
+            } else {
+                count3 = 0;
+                img3.src = 'jmg/meo3.jpg';
+
+            }
+            checkShadow()
+        }
+
+    function changeImage4() {
+        count4++;
+        if (count4 == 1) {
+            img4.src = 'jmg/gau4.jpg';
+        } else if (count3 == 2) {
+            img4.src = 'jmg/kji4.jpg';
+        } else {
+            count4 = 0;
+            img4.src = 'jmg/meo.jpg';
+
+        }
+        checkShadow()
+    }
+    function changeImage5() {
+        count5++;
+        if (count5 == 1) {
+            img5.src = 'jmg/gau5.jpg';
+        } else if (count5 == 2) {
+            img5.src = 'jmg/khi5.jpg';
+        } else {
+            count5 = 0;
+            img5.src = 'jmg/meo5.jpg';
+
+        }
+        checkShadow()
+    }
+    function checkShadow()
+    {
+        if(count1 == count2 && count2 == count3 && count3 == count4 && count3 == count5)
+        {
+            img1.style.boxShadow = 'red 4px 4px 9px';
+            img2.style.boxShadow = 'red 4px 4px 9px';
+            img3.style.boxShadow = 'red 4px 4px 9px';
+            img4.style.boxShadow = 'red 4px 4px 9px';
+            img5.style.boxShadow = 'red 4px 4px 9px';
+        }
+        else
+        {
+            img1.style.boxShadow = 'blue 4px 4px 9px';
+            img2.style.boxShadow = 'blue 4px 4px 9px';
+            img3.style.boxShadow = 'blue 4px 4px 9px';
+            img4.style.boxShadow = 'blue 4px 4px 9px';
+            img5.style.boxShadow = 'blue 4px 4px 9px';
+        }
+    }
+</script>
+</body>
+</html>
